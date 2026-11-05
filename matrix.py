@@ -31,7 +31,6 @@ def powers(lst, num1, num2):
 		for j in range(num1, num2+1):
 			new_row.append(lst[i]**j)
 		out.append(new_row)
-	print(out)
 	return out
 
 def matmul(s1, s2):
@@ -57,7 +56,24 @@ def matmul(s1, s2):
 	return out
 
 def invert(matrix):
-	pass
+	rows = len(matrix)
+	cols = len(matrix)
+
+	assert rows == 2 and cols == 2
+
+	a = matrix[0][0]; b = matrix[0][1]
+	c = matrix[1][0]; d = matrix[1][1]
+
+	# Calculating determinant
+	det = a * d - b * c
+
+	# Calculating inverse matrix
+	inv = [
+		[d/det, -b/det], 
+		[-c/det, a/det]
+		]
+
+	return inv
 
 def loadtxt(matrix):
 	pass
