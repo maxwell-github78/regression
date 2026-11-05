@@ -1,5 +1,5 @@
 def transpose(matrix):
-	pass #I'm working on this
+	return matrix
 
 def powers(matrix):
 	pass
