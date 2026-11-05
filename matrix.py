@@ -22,8 +22,17 @@ def transpose(matrix):
 		out.append(new_row)
 	return out
 
-def powers(matrix):
-	pass
+def powers(lst, num1, num2):
+	rows = len(lst)
+
+	out = []
+	for i in range(rows):
+		new_row = []
+		for j in range(num1, num2+1):
+			new_row.append(lst[i]**j)
+		out.append(new_row)
+	print(out)
+	return out
 
 def matmul(s1, s2):
 	rows1 = len(s1)
