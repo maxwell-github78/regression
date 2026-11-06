@@ -14,7 +14,9 @@ Xpt = transpose(Xp)
 
 [[b],[m]] = matmul(invert(matmul(Xpt,Xp)),matmul(Xpt,Yp))
 
-Y2 = X * m + b
+Y2 = []
+for x in X:
+    Y2.append(b + m * x)
 
 plt.plot(X,Y,'ro')
 plt.plot(X,Y2)
