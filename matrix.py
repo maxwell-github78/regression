@@ -1,6 +1,7 @@
 def verify_matrix(matrix):
 	#Verify that all elements are a number
 	for row in matrix:
+		assert type(row) == list 
 		for element in row:
 			if not type(element) in (float, int):
 				return False
