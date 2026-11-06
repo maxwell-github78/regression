@@ -76,5 +76,14 @@ def invert(matrix):
 
 	return inv
 
-def loadtxt(matrix):
-	pass
+def loadtxt(file):
+	matrix = []
+	with open(file) as f:
+		for line in f:
+			# Find the words in a row and converts them to floats
+			new_row = [float(line.split()[0]), float(line.split()[1])]
+			matrix.append(new_row)
+		
+	assert verify_matrix(matrix)
+
+	return matrix
