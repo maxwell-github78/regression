@@ -1,6 +1,8 @@
 def verify_matrix(matrix): 
 	assert type(matrix) == list 
 	#Verify that all elements are a number and every row is a list
+	if matrix == []:
+		return True
 	for row in matrix:
 		assert type(row) == list 
 		for element in row:
@@ -14,6 +16,8 @@ def verify_matrix(matrix):
 	return True
 
 def transpose(matrix):
+	if matrix == []:
+		return []
 	out = []
 	rows = len(matrix)
 	columns = len(matrix[0]) #Assuming a correct matrix
