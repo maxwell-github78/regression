@@ -40,6 +40,9 @@ def powers(lst, num1, num2):
 	return out
 
 def matmul(s1, s2):
+	if s1 == s2 == []:
+		return []
+	
 	rows1 = len(s1)
 	cols1 = len(s1[0])
 
